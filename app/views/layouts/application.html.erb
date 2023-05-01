@@ -4,7 +4,7 @@
     <%= render 'shared/head' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar' if @should_render_navbar %>
     <%= render 'shared/notices' %>
     <div class="container">
       <%= yield %>

@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
-  root to: "home#index"
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
-  
-  devise_scope :user do
-    get 'login', to: 'devise/sessions#new'
-    get 'signup', to: 'devise/registration#new'
-    get '/users/sign_out', to: 'devise/sessions#destroy'
-   end
 
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+
+  get 'appearance', to: 'home#appearance'
+  get ':id', to: 'home#show', as: :user
+
+  root to: "home#index"
 end
