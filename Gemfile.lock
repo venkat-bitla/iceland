@@ -241,7 +241,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
-  cssbundling-rails (~> 1.1)
+  cssbundling-rails
   debug
   devise
   devise-i18n
